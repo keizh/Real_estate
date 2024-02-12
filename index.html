@@ -8,24 +8,104 @@
     <link rel="shortcut icon" href="" type="image/x-icon" />
 
     <!--=============== BOXICONS ===============-->
-    <link rel="stylesheet" href="boxicons.min.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
     <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href="" />
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 
     <title>Responsive real state website - Bedimcode</title>
   </head>
   <body>
     <!--==================== HEADER ====================-->
-    <header class="header" id="header"></header>
+    <header class="header" id="header">
+      <nav class="navigation container">
+        <h1 class="nav-logo">
+          Holux <span><i class="bx bxs-home-alt-2"></i></span>
+        </h1>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#home"><i class="bx bx-home-alt-2"></i></a>
+            <h1>Home</h1>
+          </li>
+          <li class="nav-item">
+            <a href="#Residences"><i class="bx bx-buildings"></i></a>
+            <h1>Residences</h1>
+          </li>
+          <li class="nav-item">
+            <a href="#Value"><i class="bx bx-award"></i></a>
+
+            <h1>Value</h1>
+          </li>
+          <li class="nav-item">
+            <a href="#Value"><i class="bx bx-phone"></i></a>
+            <h1>Call</h1>
+          </li>
+        </ul>
+
+        <a href="#" class="nav-sub">Subscribe</a>
+      </nav>
+    </header>
 
     <!--==================== MAIN ====================-->
     <main class="main">
       <!--==================== HOME ====================-->
-      <section class="home section" id="home"></section>
+      <section class="home section" id="home">
+        <div class="container grid home-container">
+          <div class="left">
+            <h1 class="home-title">
+              Discover <br />
+              Most Suitable <br />
+              Property
+            </h1>
+            <p class="home-description">
+              Find a variety of properties that suit you very easily, forget all
+              difficulties in finding a residence for you
+            </p>
+            <div class="home-search">
+              <i class="bx bxs-location-plus"></i>
+              <input type="text" />
+              <span>Search</span>
+            </div>
+            <div class="grid home-stats">
+              <div>
+                <h1 class="home-value-number">9K <span>+</span></h1>
+                <p class="home-value-description">
+                  Premium <br />
+                  Product
+                </p>
+              </div>
+
+              <div>
+                <h1 class="home-value-number">2K <span>+</span></h1>
+                <p class="home-value-description">
+                  Happy <br />
+                  Customer
+                </p>
+              </div>
+
+              <div>
+                <h1 class="home-value-number">28K <span>+</span></h1>
+                <p class="home-value-description">
+                  Awards <br />
+                  Winning
+                </p>
+              </div>
+            </div>
+            <div class="home-image-container">
+              <div class="home-image">
+                <img src="./assets/img/home.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!--==================== LOGOS ====================-->
       <section class="logos section"></section>

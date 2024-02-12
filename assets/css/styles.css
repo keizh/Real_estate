@@ -108,7 +108,7 @@ button {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1024px;
-  margin-inline: 1.5rem;
+  margin-inline: auto;
 }
 
 .grid {
@@ -140,11 +140,89 @@ button {
 
 /*=============== HEADER & NAV ===============*/
 
+header {
+  position: fixed;
+  width: 100%;
+  z-index: var(--z-fixed);
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navigation {
+  width: 100%;
+  padding-block: 0.9rem;
+  padding-inline: 1rem;
+  display: flex;
+  justify-content: space-between;
+  /* color: var(--first-color-alt); */
+}
+
+.nav-logo {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: #fff;
+}
+
+.nav-sub {
+  display: block;
+  font-size: var(--normal-font-size);
+  color: #fff;
+}
+
+@media screen and (max-width: 1020px) {
+  .nav-menu {
+    width: 300px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    position: fixed;
+    z-index: var(--z-fixed);
+    display: flex;
+    justify-content: space-between;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+
+    background-color: var(--container-color);
+    box-shadow: 5px 5px 10px var(--text-color-light);
+    border-radius: 1rem;
+  }
+
+  .nav-menu h1 {
+    font-size: var(--small-font-size);
+    display: none;
+  }
+
+  .nav-menu h1 {
+    font-size: var(--small-font-size);
+    display: none;
+  }
+}
+
 /* Change background header */
 
 /* Active link */
 
 /*=============== HOME ===============*/
+
+.home {
+  background-color: #222;
+}
+
+.home-container {
+  padding-inline: 1rem;
+}
+
+.home-image-container {
+  padding-inline: 2rem;
+}
+
+.home-image {
+  border-radius: 10rem 10rem 0 0;
+  overflow: hidden;
+  border: 8px solid var(--text-color);
+}
 
 /*=============== BUTTON ===============*/
 
