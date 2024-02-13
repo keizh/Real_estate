@@ -131,7 +131,7 @@ body.dark-theme {
 }
 
 .dark-theme .home-search input {
-  background-color: black;
+  background-color: #222222;
   color: white;
 }
 
@@ -235,7 +235,7 @@ header {
   color: #fff;
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1023px) {
   .nav-menu {
     width: 300px;
     margin-inline: auto;
@@ -254,7 +254,7 @@ header {
     border-radius: 1rem;
   }
 
-  .nav-menu h1 {
+  .nav-menu span {
     font-size: var(--small-font-size);
     display: none;
   }
@@ -277,7 +277,14 @@ header {
   color: var(--text-color-alt);
 }
 
+.active-header #theme-button {
+  color: black;
+}
+
 .active-section i {
+  color: orange;
+}
+.active-section span {
   color: orange;
 }
 /*=============== HOME ===============*/
@@ -300,7 +307,6 @@ header {
 }
 
 .home-search {
-  width: 100%;
   border-radius: 1rem;
   background-color: var(--container-color);
   display: flex;
@@ -345,6 +351,7 @@ header {
 /* .home-image-container {
   transform: translateY(20%);
 } */
+
 .home-container {
   padding-inline: 1rem;
   transform: translateY(4rem);
@@ -365,6 +372,10 @@ header {
 
 .home-img {
   border-radius: 1rem;
+}
+
+.right {
+  justify-self: center;
 }
 
 /*=============== BUTTON ===============*/
@@ -483,6 +494,23 @@ header {
   height: fit-content;
 }
 
+.value-accordion {
+  justify-self: center;
+  height: 335px;
+}
+
+.value-left {
+  justify-self: center;
+}
+
+.value-image img {
+  border-radius: 10rem 10rem 0 0;
+}
+
+.value-image-container {
+  width: 300px;
+  align-self: self-end;
+}
 /*=============== CONTACT ===============*/
 
 .contact-container {
@@ -498,8 +526,9 @@ header {
 
 .contact-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 160px);
   gap: 6px;
+  justify-content: center;
 }
 
 .card {
@@ -640,8 +669,6 @@ header {
   margin-bottom: 1rem;
 }
 
-/*=============== SCROLL BAR ===============*/
-
 /*=============== SCROLL UP ===============*/
 
 .scroll-up {
@@ -656,13 +683,141 @@ header {
   cursor: pointer;
 }
 
-/* Show Scroll Up*/
-
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 
+@media screen and (max-width: 350px) {
+  .section {
+    padding: 2.5rem 0 2rem;
+  }
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    gap: 10px;
+  }
+}
+
 /* For medium devices */
+
+@media screen and (min-width: 576px) {
+  .home-search {
+    width: 400px;
+  }
+
+  .footer-main {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+  .footer-main {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .home-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .value-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .value-image-container {
+    width: 300px;
+  }
+  .contact-container {
+    text-align: left;
+    grid-template-columns: 2fr 1fr;
+    direction: rtl; /* Set direction to right-to-left */
+  }
+
+  .contact-image {
+    width: 325px;
+    border-radius: 10rem 10rem 0 0;
+    overflow: hidden;
+    /* border: 8px solid var(--text-color); */
+
+    object-position: center;
+  }
+
+  .subscribe-container {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding-block: 1rem;
+  }
+
+  .subscribe-subcontainer {
+    width: 500px;
+  }
+
+  .subscribe-subcontainer h1 {
+    color: white;
+  }
+
+  .subscribe-subcontainer p {
+    width: 50%;
+    align-self: center;
+  }
+
+  .subscribe-button {
+    background-color: var(--title-color);
+    width: fit-content;
+    align-self: center;
+  }
+
+  .all-rights,
+  .TC {
+    text-align: center;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color);
+    margin-bottom: 1rem;
+  }
+}
 
 /* For large devices */
 
-/* For 2K & 4K resolutions */
+@media screen and (min-width: 1023px) {
+  .footer-main {
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .nav-menu {
+    position: initial;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .nav-menu span {
+    font-size: var(--small-font-size);
+    display: initial;
+  }
+
+  .nav-menu a {
+    font-size: var(--h2-font-size);
+    color: var(--text-color);
+    /* display: none; */
+  }
+  .nav-menu i {
+    display: none;
+  }
+
+  .nav-sub {
+    display: initial;
+    margin-left: 20px;
+  }
+}

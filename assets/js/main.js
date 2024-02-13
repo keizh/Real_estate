@@ -22,6 +22,25 @@ const swiper = new Swiper(".popular-swiper", {
   slidesPerView: "auto",
 
   loop: true,
+  autoplay: {
+    delay: 1400,
+    disableOnInteraction: false,
+  },
+
+  breakpoints: {
+    545: {
+      slidesPerView: 2,
+      centeredSlides: false,
+    },
+    900: {
+      slidesPerView: 3,
+      centeredSlides: false,
+    },
+    1150: {
+      slidesPerView: 3,
+      centeredSlides: false,
+    },
+  },
 
   // Navigation arrows
   navigation: {
@@ -48,7 +67,7 @@ acc_array.forEach(function (accordion) {
   });
 });
 
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+/*=============== ACTIVE SCROLL SECTIONS ===============*/
 
 const sections = document.querySelectorAll(" section[id]");
 
